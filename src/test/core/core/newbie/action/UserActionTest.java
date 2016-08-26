@@ -13,17 +13,25 @@ import com.core.newbie.service.UserService;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import javax.annotation.Resource;
-
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"classpath*:spring-mybatis.xml"})
+@ContextConfiguration(locations = {"classpath:spring-mybatis.xml"})
 public class UserActionTest {
+    private UserService userService;
+
     private static final Logger logger = Logger.getLogger(UserActionTest.class);
-    @Resource
-    private final UserService userService = null;
+
+    @Autowired
+    public void setUserService(final UserService userService) {
+        this.userService = userService;
+    }
+
+    public UserService getUserService() {
+        return userService;
+    }
 
     @Test
     public void test1 () {

@@ -10,17 +10,26 @@ package com.core.newbie.impl;
 import com.core.newbie.mapper.UserMapper;
 import com.core.newbie.model.User;
 import com.core.newbie.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
-
-@Service("UserService")
+@Service("userService")
 public class UserServiceImpl implements UserService {
-    @Resource
-    private UserMapper userDao;
+    private UserMapper userMapper;
+
+    public UserMapper getUserMapper() {
+        return userMapper;
+    }
+
+    @Autowired
+    public void setUserMapper(final UserMapper userMapper) {
+        this.userMapper = userMapper;
+    }
+
+
 
     @Override
     public User getUserById(final int userId) {
-        return userDao.selectByPrimaryKey(userId);
+        return userMapper.selectByPrimaryKey(userId);
     }
 }
