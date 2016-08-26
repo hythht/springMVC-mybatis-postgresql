@@ -32,4 +32,9 @@ public class UserServiceImpl implements UserService {
     public User getUserById(final int userId) {
         return userMapper.selectByPrimaryKey(userId);
     }
+
+    @Override
+    public void insetUser(final User user) {
+        userMapper.insert(user);
+    }
 }

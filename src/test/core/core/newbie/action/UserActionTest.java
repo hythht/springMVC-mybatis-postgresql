@@ -35,7 +35,18 @@ public class UserActionTest {
 
     @Test
     public void test1 () {
-        final User user = userService.getUserById(1);
+        final User user = userService.getUserById(111);
+        logger.info(JSON.toJSON(user));
+    }
+
+    @Test
+    public void test2 () {
+        final User user = new User();
+        user.setId(111);
+        user.setAge(14);
+        user.setPassword("12");
+        user.setUserName("derrick-2");
+        userService.insetUser(user);
         logger.info(JSON.toJSON(user));
     }
 }

@@ -11,4 +11,6 @@ import com.core.newbie.model.User;
 
 public interface UserService {
     User getUserById(int userId);
+
+    void insetUser(User user);
 }
