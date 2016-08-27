@@ -7,8 +7,10 @@
 // ============================================================================
 package com.core.newbie.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.core.newbie.model.User;
 import com.core.newbie.service.UserService;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,6 +21,7 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 @RequestMapping("user")
 public class UserController {
+    Logger logger = Logger.getLogger(UserController.class);
     private UserService userService;
 
     public UserService getUserService() {
@@ -35,6 +38,9 @@ public class UserController {
         final int userId = Integer.parseInt(request.getParameter("id"));
         final User user = userService.getUserById(userId);
         model.addAttribute("user", user);
+        logger.debug("running in UserController.java -> showUser()");
+        logger.info(JSON.toJSON(request.getRequestURI()));
+        logger.info(JSON.toJSON(user));
         return "showUser";
     }
 }
