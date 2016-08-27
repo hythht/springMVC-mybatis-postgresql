@@ -35,7 +35,7 @@ public class UserActionTest {
 
     @Test
     public void test1 () {
-        final User user = userService.getUserById(111);
+        final User user = userService.getUserById(1);
         logger.info(JSON.toJSON(user));
     }
 
