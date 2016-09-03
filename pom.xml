@@ -151,11 +151,11 @@
             <artifactId>jackson-mapper-asl</artifactId>
             <version>1.9.13</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>growthing-02</groupId>
             <artifactId>growthing-02</artifactId>
             <version>1.0-SNAPSHOT</version>
-        </dependency>
+        </dependency>-->
     </dependencies>
     <build>
         <finalName>growthing-02</finalName>

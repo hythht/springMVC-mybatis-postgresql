@@ -5,7 +5,7 @@
 // CHANGE LOG
 // CNT.5.0.1 : 2016-08-26, derrick.liang, creation
 // ============================================================================
-package core.core.newbie.action;
+package com.core.newbie.action;
 
 import com.alibaba.fastjson.JSON;
 import com.core.newbie.model.User;
@@ -39,7 +39,7 @@ public class UserActionTest {
         logger.info(JSON.toJSON(user));
     }
 
-    @Test
+   /* @Test
     public void test2 () {
         final User user = new User();
         user.setId(111);
@@ -48,5 +48,5 @@ public class UserActionTest {
         user.setUserName("derrick-2");
         userService.insetUser(user);
         logger.info(JSON.toJSON(user));
-    }
+    }*/
 }
