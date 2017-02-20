@@ -20,9 +20,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath:spring-mybatis.xml"})
 public class UserActionTest {
+    private static final Logger logger = Logger.getLogger(UserActionTest.class);
     private UserService userService;
 
-    private static final Logger logger = Logger.getLogger(UserActionTest.class);
 
     @Autowired
     public void setUserService(final UserService userService) {
@@ -34,13 +34,13 @@ public class UserActionTest {
     }
 
     @Test
-    public void test1 () {
+    public void test1() {
         final User user = userService.getUserById(1);
         logger.info(JSON.toJSON(user));
     }
 
     @Test
-    public void test2 () {
+    public void test2() {
         final User user = new User();
         user.setId(111);
         user.setAge(14);
