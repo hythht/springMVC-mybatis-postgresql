@@ -1,3 +1,8 @@
+!-- psql -U postgres
+!-- create user sprig_mvc_u with password 'p';
+!-- create database spring_mvc_d owner spring_mvc_u encoding 'UTF8';
+!-- grant all privileges on database spring_mvc_d to spring_mvc_d;
+
 CREATE
 	TABLE
 		 n_user(

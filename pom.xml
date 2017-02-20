@@ -19,11 +19,11 @@
     <dependencies>
 
         <!--<dependency>-->
-            <!--<groupId>junit</groupId>-->
-            <!--<artifactId>junit</artifactId>-->
-            <!--<version>4.12</version>-->
-            <!--&lt;!&ndash;This means it will be loaded only under development&ndash;&gt;-->
-            <!--<scope>test</scope>-->
+        <!--<groupId>junit</groupId>-->
+        <!--<artifactId>junit</artifactId>-->
+        <!--<version>4.12</version>-->
+        <!--&lt;!&ndash;This means it will be loaded only under development&ndash;&gt;-->
+        <!--<scope>test</scope>-->
         <!--</dependency>-->
 
         <!--spring core jars-->
