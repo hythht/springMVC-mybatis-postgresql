@@ -5,7 +5,7 @@
 // CHANGE LOG
 // CNT.5.0.1 : 2016-08-26, derrick.liang, creation
 // ============================================================================
-package core.core.newbie.action;
+package com.core.newbie.action;
 
 import com.alibaba.fastjson.JSON;
 import com.core.newbie.model.User;

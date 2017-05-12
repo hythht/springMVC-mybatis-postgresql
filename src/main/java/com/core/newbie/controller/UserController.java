@@ -22,16 +22,9 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("user")
 public class UserController {
     Logger logger = Logger.getLogger(UserController.class);
-    private UserService userService;
-
-    public UserService getUserService() {
-        return userService;
-    }
 
     @Autowired
-    public void setUserService(final UserService userService) {
-        this.userService = userService;
-    }
+    private UserService userService;
 
     @RequestMapping("/showUser")
     public String showUser(final HttpServletRequest request, final Model model) {
