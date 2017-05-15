@@ -20,6 +20,8 @@
     <!--</bean>-->
     <!--<mvc:view-controller path="/" view-name="/WEB-INF/index.html"/>-->
     <mvc:resources location="/WEB-INF/static/" mapping="/static/**" />
+    <mvc:resources location="/assets/css/" mapping="/assets/css/**" />
+    <mvc:resources location="/assets/img/" mapping="/assets/img/**" />
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/"/>
         <property name="suffix" value=""/>
