@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
-@RequestMapping("user")
+@RequestMapping("/user")
 public class UserController {
     Logger logger = Logger.getLogger(UserController.class);
 
@@ -34,6 +34,6 @@ public class UserController {
         logger.debug("running in UserController.java -> showUser()");
         logger.info(JSON.toJSON(request.getRequestURI()));
         logger.info(JSON.toJSON(user));
-        return "showUser";
+        return "/user/showUser.jsp";
     }
 }

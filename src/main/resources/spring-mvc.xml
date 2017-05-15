@@ -18,9 +18,10 @@
     <!--</list>-->
     <!--</property>-->
     <!--</bean>-->
-
+    <!--<mvc:view-controller path="/" view-name="/WEB-INF/index.html"/>-->
+    <mvc:resources location="/WEB-INF/static/" mapping="/static/**" />
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/jsp/"/>
-        <!--<property name="suffix" value=".jsp"/>-->
+        <property name="prefix" value="/WEB-INF/"/>
+        <property name="suffix" value=""/>
     </bean>
 </beans>
